@@ -42,5 +42,8 @@ python app.py
   ![image](https://github.com/user-attachments/assets/b7b606b4-86c3-442b-b3ae-f951bafd4f0e)
 
 
-  
+  ** TASK 4 RESULT **
+
+  ![image](https://github.com/user-attachments/assets/c6a4e0d3-3c11-47c1-8b56-78c1d2b96a84)
+
   
