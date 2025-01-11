@@ -2,7 +2,7 @@
 
 To run app.py please follow the steps below: 
 
-1. Please enter the following details in the .env file 
+1. Please enter the following details in the .env file to establish connection to local PostgresDB
 ```Python
 hostname='Enter here'
 database='Enter here'
