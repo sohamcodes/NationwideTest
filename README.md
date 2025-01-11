@@ -38,12 +38,17 @@ python app.py
 
 
   ** TASK 3 RESULT **
-
+  sanitization of transactions_001
   ![image](https://github.com/user-attachments/assets/b7b606b4-86c3-442b-b3ae-f951bafd4f0e)
 
 
-  ** TASK 4 RESULT **
+  sanitization of transactions_002
+  ![image](https://github.com/user-attachments/assets/1d863c3c-cb07-4c40-a228-6fe22e3ad512)
 
+
+
+  ** TASK 4 RESULT **
+  total count of frauds in transactions_001(sanitized) and transactions_002 (sanitized)
   ![image](https://github.com/user-attachments/assets/c6a4e0d3-3c11-47c1-8b56-78c1d2b96a84)
 
   
