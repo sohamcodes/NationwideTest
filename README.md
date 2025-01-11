@@ -7,8 +7,8 @@ python -m venv .venv
 # Activate Virtual environment
 source .venv/bin/activate
 
-```
-
-```Python
+# Import dependencies
 pip install -r requirements.txt
 ```
+
+
