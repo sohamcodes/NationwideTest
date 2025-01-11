@@ -30,7 +30,9 @@ python app.py
 ```
 
 # Results 
-Task 1 Result 
-<img width="1028" alt="Screenshot 2025-01-11 at 13 02 30" src="https://github.com/user-attachments/assets/b903fb66-5efb-491a-9f6e-7e43172d6311" />
+  **Task 1 Result **
+  
+  <img width="1028" alt="Screenshot 2025-01-11 at 13 02 30" src="https://github.com/user-attachments/assets/b903fb66-5efb-491a-9f6e-7e43172d6311" />
 
 
+  
