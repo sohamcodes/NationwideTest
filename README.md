@@ -36,5 +36,8 @@ python app.py
 
   ** TASK 3 RESULT **
 
+  ![image](https://github.com/user-attachments/assets/b7b606b4-86c3-442b-b3ae-f951bafd4f0e)
+
+
   
   
