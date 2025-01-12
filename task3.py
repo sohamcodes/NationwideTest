@@ -5,6 +5,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
     import psycopg2
     import pandas as pd
 
+    # Load environment variables from .env file 
     load_dotenv()
     hostname = os.environ.get("hostname")
     database= os.environ.get("database")
@@ -15,6 +16,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
     cur=None
      
     try: 
+        # Establish connection to local PostgresDB server 
         conn= psycopg2.connect(
             host=hostname,
             dbname= database,
@@ -26,7 +28,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
         print ()
         cur=conn.cursor()
 
-        # Create Table 
+        # Create Table schema for transactions_001
         CREATE_SCRIPT_1 = '''
         CREATE TABLE IF NOT EXISTS Transactions_001(
             credit_card_number bigint,
@@ -34,7 +36,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
             state varchar(40)
         )
         '''
-        
+        # Create Table schema for transactions_002
         CREATE_SCRIPT_2 = '''
         CREATE TABLE IF NOT EXISTS Transactions_002(
             credit_card_number bigint,
@@ -42,6 +44,8 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
             state varchar(40)
         )
         '''
+
+        # Execute the sctipts 
         cur.execute(CREATE_SCRIPT_1)
         cur.execute(CREATE_SCRIPT_2)
         
@@ -50,7 +54,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
         print ()
         
         try:
-            # Insert CSV file from location to table 
+            # Insert CSV file from file path to transactions_001 and transactions_002 respectively 
             with open(csv_file_path1, 'r') as f:
                cur.copy_expert(f"COPY Transactions_001 (credit_card_number, ipv4, state) FROM stdin WITH CSV HEADER", f)
         except FileNotFoundError:
@@ -72,7 +76,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
         print ("transaction-002.csv successfully uploaded to local PostgresDB ")
         print ()
         
-        # SQL statements to sanitize transactions 
+        # SQL statements to sanitize transactions_001 and transactions_002
         SANITIZATION_SCRIPT_1= '''
         CREATE TABLE s_transaction_001 AS
         SELECT * 
@@ -133,7 +137,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
 
         cur.execute(SANITIZATION_SCRIPT_1)
         cur.execute(SANITIZATION_SCRIPT_2)
-        # Execute 
+        # Execute sanitiziation script 
         conn.commit()
         print ("Sanitizations successfully carried out.")
         print ("Sanitized table of transaction_001  can be viewed as s_transaction_001 in local PostgresDB ")
@@ -143,6 +147,7 @@ def sanitize_transactions(csv_file_path1, csv_file_path2):
         print(error)
 
     finally:
+        # Close the connection to local PostgresDB Server 
         if cur is not None:
             cur.close()
         if conn is not None: 
