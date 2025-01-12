@@ -36,7 +36,7 @@ def main():
     # TASK 4
     '''Task 4 involves the following
     a) Join 'fraud' and 'santized_transaction_01' tables on 'credit_card_number' column and calculate total fraud on santized dataset 1
-    b) Join 'fraud' and 'santized_transaction_02' tables on 'credit_card_number' column and calculate total fraud on santized dataset 1
+    b) Join 'fraud' and 'santized_transaction_02' tables on 'credit_card_number' column and calculate total fraud on santized dataset 2
     c) Report the total 'fraud' in sanitized transactions 
     '''
     print ("----------------------Task 4 -------------------")
