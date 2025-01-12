@@ -4,7 +4,8 @@ To run app.py please follow the steps below:
 
 1. After cloning the github reporsitory, please create .env file by using the following command in the terminal 
 
-``` touch .env
+```shell
+touch .env
 ```
 
 2. Please enter the following details in the .env file to establish connection to local PostgresDB
