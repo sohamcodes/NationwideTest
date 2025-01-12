@@ -2,7 +2,12 @@
 
 To run app.py please follow the steps below: 
 
-1. Please enter the following details in the .env file to establish connection to local PostgresDB
+1. After cloning the github reporsitory, please create .env file by using the following command in the terminal 
+
+``` touch .env
+```
+
+2. Please enter the following details in the .env file to establish connection to local PostgresDB
 ```Python
 hostname='Enter here'
 database='Enter here'
@@ -11,7 +16,7 @@ pwd='Enter here'
 port_id='Enter here'
 ```
 
-2. Please create a virtual environment and activate virtual environment 
+3. Please create a virtual environment and activate virtual environment 
 ```Python
 # Create virtual environment 
 python -m venv .venv
@@ -24,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 
-3. Run app.py in the terminal
+4. Run app.py in the terminal
 ```Python
 python app.py
 ```
