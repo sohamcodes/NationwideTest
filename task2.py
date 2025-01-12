@@ -6,6 +6,7 @@ def upload_fraud_csv(input_csv_path):
     import psycopg2
     import pandas as pd
 
+    # Load all the environment details from .env
     load_dotenv()
     hostname = os.environ.get("hostname")
     database= os.environ.get("database")
@@ -55,6 +56,7 @@ def upload_fraud_csv(input_csv_path):
         exit(1)
 
     try: 
+        # Establish connection to local PostgresDB server 
         conn= psycopg2.connect(
             host=hostname,
             dbname= database,
@@ -64,7 +66,8 @@ def upload_fraud_csv(input_csv_path):
         
         print("connection successfully established to Local PostgresDB server")
         print()
-        
+
+        # Start cursor within Local PostgresDB 
         cur=conn.cursor()
 
         # Create Table 
@@ -75,7 +78,7 @@ def upload_fraud_csv(input_csv_path):
             state varchar(40)
         )
         '''
-
+        # Execute the SQL script 
         cur.execute(CREATE_SCRIPT_1)
 
         # Insert CSV file from location to table 
@@ -93,7 +96,7 @@ def upload_fraud_csv(input_csv_path):
         exit(1)
         
     finally:
-        # Close connection
+        # Close connection to local PostgresDB server 
         if cur is not None:
             cur.close()
         if conn is not None: 
