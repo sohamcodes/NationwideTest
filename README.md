@@ -8,7 +8,8 @@ To run app.py please follow the steps below:
 touch .env
 ```
 
-2. Please enter the following details in the .env file to establish connection to YOUR local PostgresDB
+2. Please enter the following details in the .env file to establish connection to YOUR local PostgresDB.
+   These are your DB secrets. 
 ```Python
 hostname='Enter here'
 database='Enter here'
