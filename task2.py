@@ -85,7 +85,7 @@ def upload_fraud_csv(input_csv_path):
         with open(output_csv_path, 'r') as f:
             cur.copy_expert(f"COPY fraud_001 (credit_card_number, ipv4, state) FROM stdin WITH CSV HEADER", f)
         
-        # Execute 
+        
         conn.commit()
         
         print ("Table inserted in Local PostgresDB")
