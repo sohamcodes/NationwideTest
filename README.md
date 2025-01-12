@@ -9,7 +9,7 @@ touch .env
 ```
 
 2. Please enter the following details in the .env file to establish connection to YOUR local PostgresDB.
-   These are your DB secrets. 
+   These are your DB secrets found in your pgAdmin
 ```Python
 hostname='Enter here'
 database='Enter here'
