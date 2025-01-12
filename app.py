@@ -4,7 +4,7 @@ from task4 import count_fraud
 
 
 def main():
-    # Inputs from the user 
+    # Inputs from the user. Copy the path of the files from the local folder directory. 
     print()
     fraud_csv_file_path = input('Please Input file path of fraud.csv:  ')
     transaction001_csv_file_path= input('Please Input file path of transaction001.csv:  ')
