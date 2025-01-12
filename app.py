@@ -26,8 +26,8 @@ def main():
    # TASK 3 
     '''Task 3 involves the following
     a) Create Table and schema in PostgreSQL for transactions_001 and transactions_002
-    b) Insert CSV files into the the table 
-    c) Perform sanitization on the two datasets '''
+    b) Insert CSV files into the the table from the source locations given as input from the table
+    c) Perform sanitization on the two datasets using SQL logic and store in local PostgresDB '''
     
     print ("----------------------Task 3 ------------------")
     sanitize_transactions(transaction001_csv_file_path, transaction002_csv_file_path)
