@@ -93,6 +93,7 @@ def upload_fraud_csv(input_csv_path):
         exit(1)
         
     finally:
+        # Close connection
         if cur is not None:
             cur.close()
         if conn is not None: 
